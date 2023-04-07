@@ -6,10 +6,10 @@ OBJECTS=$(SOURCES:.cpp=.o)
 all: $(SOURCES) $(MAINPROG)
 
 $(MAINPROG): $(OBJECTS)
-	g++ $(FLAGS) $(OBJECTS) -o $@
+	g++ $(OBJECTS) -o $@
 
 .cpp.o:
-	g++ $(FLAGS) -c $< -o $@
+	g++ -c $< -o $@
 
 clean:
 	rm *.o $(MAINPROG)
